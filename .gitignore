@@ -1,1 +1,17 @@
+# Компилированные классы
 target/
+*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Локальные настройки
+.DS_Store
+Thumbs.db
+
+# Временные файлы
+*.tmp
+*.log
+
