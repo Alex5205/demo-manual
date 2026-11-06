@@ -20,3 +20,12 @@ target/
 # Системные файлы ОС
 .DS_Store
 Thumbs.db
+
+*.log
+*.jar
+
+*.log
+*.log.*
+target/
+*.jar
+
