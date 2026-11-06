@@ -141,7 +141,8 @@ public class HttpCalcServer {
         }
 
         private void sendResponse(HttpExchange exchange, int statusCode, String responseBody) throws IOException {
-            byte[] bytes = responseBody.getBytes(StandardCharsets.UTF_8);
+            exchange.getResponseHeaders().set("Content-Type", "application/json"); 
+	    byte[] bytes = responseBody.getBytes(StandardCharsets.UTF_8);
             exchange.sendResponseHeaders(statusCode, bytes.length);
             try (OutputStream os = exchange.getResponseBody()) {
                 os.write(bytes);
